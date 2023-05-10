@@ -1,1 +1,712 @@
-{"$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json", "version": "2.1.0", "runs": [{"tool": {"driver": {"name": "Checkov", "version": "2.3.205", "informationUri": "https://checkov.io", "rules": [{"id": "CKV_AZURE_7", "name": "Azure AKS cluster network policies are not enforced", "shortDescription": {"text": "Azure AKS cluster network policies are not enforced"}, "fullDescription": {"text": "Azure AKS cluster network policies are not enforced"}, "help": {"text": "Azure AKS cluster network policies are not enforced\nResource: azurerm_kubernetes_cluster.aks"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_kubernetes_4"}, {"id": "CKV_AZURE_117", "name": "AKS does not use disk encryption set", "shortDescription": {"text": "AKS does not use disk encryption set"}, "fullDescription": {"text": "AKS does not use disk encryption set"}, "help": {"text": "AKS does not use disk encryption set\nResource: azurerm_kubernetes_cluster.aks"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-aks-uses-disk-encryption-set"}, {"id": "CKV_AZURE_115", "name": "AKS is not enabled for private clusters", "shortDescription": {"text": "AKS is not enabled for private clusters"}, "fullDescription": {"text": "AKS is not enabled for private clusters"}, "help": {"text": "AKS is not enabled for private clusters\nResource: azurerm_kubernetes_cluster.aks"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-aks-enables-private-clusters"}, {"id": "CKV_AZURE_141", "name": "Azure Kubernetes Service (AKS) local admin account is enabled", "shortDescription": {"text": "Azure Kubernetes Service (AKS) local admin account is enabled"}, "fullDescription": {"text": "Azure Kubernetes Service (AKS) local admin account is enabled"}, "help": {"text": "Azure Kubernetes Service (AKS) local admin account is enabled\nResource: azurerm_kubernetes_cluster.aks"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/ensure-azure-kubernetes-service-aks-local-admin-account-is-disabled"}, {"id": "CKV_AZURE_116", "name": "AKS does not use Azure policies add-on", "shortDescription": {"text": "AKS does not use Azure policies add-on"}, "fullDescription": {"text": "AKS does not use Azure policies add-on"}, "help": {"text": "AKS does not use Azure policies add-on\nResource: azurerm_kubernetes_cluster.aks"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-aks-uses-azure-policies-add-on"}, {"id": "CKV_AZURE_6", "name": "AKS API server does not define authorized IP ranges", "shortDescription": {"text": "AKS API server does not define authorized IP ranges"}, "fullDescription": {"text": "AKS API server does not define authorized IP ranges"}, "help": {"text": "AKS API server does not define authorized IP ranges\nResource: azurerm_kubernetes_cluster.aks"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_kubernetes_3"}, {"id": "807098694255043584_Azure_1647420897055", "name": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]", "shortDescription": {"text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]"}, "fullDescription": {"text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]"}, "help": {"text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]\nResource: azurerm_kubernetes_cluster.aks"}, "defaultConfiguration": {"level": "error"}}, {"id": "807098694255043584_AZR_1671092284450", "name": "Azure Container registries Public access to All networks is enabled", "shortDescription": {"text": "Azure Container registries Public access to All networks is enabled"}, "fullDescription": {"text": "Azure Container registries Public access to All networks is enabled"}, "help": {"text": "Azure Container registries Public access to All networks is enabled\nResource: azurerm_container_registry.acr"}, "defaultConfiguration": {"level": "error"}}, {"id": "807098694255043584_AZR_1681255127049", "name": "Azure AKS cluster monitoring not enabled", "shortDescription": {"text": "Azure AKS cluster monitoring not enabled"}, "fullDescription": {"text": "Azure AKS cluster monitoring not enabled"}, "help": {"text": "Azure AKS cluster monitoring not enabled\nResource: azurerm_kubernetes_cluster.aks"}, "defaultConfiguration": {"level": "error"}}, {"id": "CKV_AZURE_160", "name": "Azure HTTP (port 80) access from the internet is not restricted", "shortDescription": {"text": "Azure HTTP (port 80) access from the internet is not restricted"}, "fullDescription": {"text": "Azure HTTP (port 80) access from the internet is not restricted"}, "help": {"text": "Azure HTTP (port 80) access from the internet is not restricted\nResource: azurerm_network_security_group.nginx-vm-nsg"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/ensure-azure-http-port-80-access-from-the-internet-is-restricted"}, {"id": "CKV_AZURE_10", "name": "Azure Network Security Group allows all traffic on SSH (port 22)", "shortDescription": {"text": "Azure Network Security Group allows all traffic on SSH (port 22)"}, "fullDescription": {"text": "Azure Network Security Group allows all traffic on SSH (port 22)"}, "help": {"text": "Azure Network Security Group allows all traffic on SSH (port 22)\nResource: azurerm_network_security_group.nginx-vm-nsg"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_networking_3"}, {"id": "CKV_AZURE_1", "name": "Azure instance does not authenticate using SSH keys", "shortDescription": {"text": "Azure instance does not authenticate using SSH keys"}, "fullDescription": {"text": "Azure instance does not authenticate using SSH keys"}, "help": {"text": "Azure instance does not authenticate using SSH keys\nResource: azurerm_linux_virtual_machine.nginx-vm"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_networking_1"}, {"id": "CKV_AZURE_50", "name": "Virtual Machine extensions are installed", "shortDescription": {"text": "Virtual Machine extensions are installed"}, "fullDescription": {"text": "Virtual Machine extensions are installed"}, "help": {"text": "Virtual Machine extensions are installed\nResource: azurerm_linux_virtual_machine.nginx-vm"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_general_14"}, {"id": "CKV_AZURE_149", "name": "Azure Virtual machine enables password authentication", "shortDescription": {"text": "Azure Virtual machine enables password authentication"}, "fullDescription": {"text": "Azure Virtual machine enables password authentication"}, "help": {"text": "Azure Virtual machine enables password authentication\nResource: azurerm_linux_virtual_machine.nginx-vm"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/ensure-azure-virtual-machine-does-not-enable-password-authentication"}, {"id": "CKV_AZURE_119", "name": "Network interfaces use public IPs", "shortDescription": {"text": "Network interfaces use public IPs"}, "fullDescription": {"text": "Network interfaces use public IPs"}, "help": {"text": "Network interfaces use public IPs\nResource: azurerm_network_interface.nginx-nic"}, "defaultConfiguration": {"level": "error"}, "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-network-interfaces-dont-use-public-ips"}], "organization": "bridgecrew"}}, "results": [{"ruleId": "CKV_AZURE_7", "ruleIndex": 0, "level": "note", "attachments": [], "message": {"text": "Azure AKS cluster network policies are not enforced"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 9, "endLine": 29, "snippet": {"text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"}}}}]}, {"ruleId": "CKV_AZURE_117", "ruleIndex": 1, "level": "note", "attachments": [], "message": {"text": "AKS does not use disk encryption set"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 9, "endLine": 29, "snippet": {"text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"}}}}]}, {"ruleId": "CKV_AZURE_115", "ruleIndex": 2, "level": "note", "attachments": [], "message": {"text": "AKS is not enabled for private clusters"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 9, "endLine": 29, "snippet": {"text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"}}}}]}, {"ruleId": "CKV_AZURE_141", "ruleIndex": 3, "level": "note", "attachments": [], "message": {"text": "Azure Kubernetes Service (AKS) local admin account is enabled"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 9, "endLine": 29, "snippet": {"text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"}}}}]}, {"ruleId": "CKV_AZURE_116", "ruleIndex": 4, "level": "note", "attachments": [], "message": {"text": "AKS does not use Azure policies add-on"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 9, "endLine": 29, "snippet": {"text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"}}}}]}, {"ruleId": "CKV_AZURE_6", "ruleIndex": 5, "level": "note", "attachments": [], "message": {"text": "AKS API server does not define authorized IP ranges"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 9, "endLine": 29, "snippet": {"text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"}}}}]}, {"ruleId": "807098694255043584_Azure_1647420897055", "ruleIndex": 6, "level": "error", "attachments": [], "message": {"text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 9, "endLine": 29, "snippet": {"text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"}}}}]}, {"ruleId": "807098694255043584_Azure_1647420897055", "ruleIndex": 6, "level": "error", "attachments": [], "message": {"text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "base.tf"}, "region": {"startLine": 3, "endLine": 6, "snippet": {"text": "resource \"azurerm_resource_group\" \"rg\" {\n  name     = var.rg_name\n  location = var.location\n}\n"}}}}]}, {"ruleId": "807098694255043584_AZR_1671092284450", "ruleIndex": 7, "level": "warning", "attachments": [], "message": {"text": "Azure Container registries Public access to All networks is enabled"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 1, "endLine": 7, "snippet": {"text": "resource \"azurerm_container_registry\" \"acr\" {\n  name                = var.acr_name\n  resource_group_name = azurerm_resource_group.rg.name\n  location            = azurerm_resource_group.rg.location\n  sku                 = \"Premium\"\n  admin_enabled       = false\n}\n"}}}}]}, {"ruleId": "807098694255043584_AZR_1681255127049", "ruleIndex": 8, "level": "none", "attachments": [], "message": {"text": "Azure AKS cluster monitoring not enabled"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "aks.tf"}, "region": {"startLine": 9, "endLine": 29, "snippet": {"text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"}}}}]}, {"ruleId": "CKV_AZURE_160", "ruleIndex": 9, "level": "note", "attachments": [], "message": {"text": "Azure HTTP (port 80) access from the internet is not restricted"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "vm.tf"}, "region": {"startLine": 35, "endLine": 65, "snippet": {"text": "resource \"azurerm_network_security_group\" \"nginx-vm-nsg\" {\n  depends_on          = [azurerm_resource_group.rg]\n  name                = \"nginx-nsg\"\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  security_rule {\n    name                       = \"Allow-SSH\"\n    description                = \"Allow SSH\"\n    priority                   = 100\n    direction                  = \"Inbound\"\n    access                     = \"Allow\"\n    protocol                   = \"Tcp\"\n    source_port_range          = \"*\"\n    destination_port_range     = \"22\"\n    source_address_prefix      = \"Internet\"\n    destination_address_prefix = \"*\"\n  }\n\n  security_rule {\n    name                       = \"Allow-HTTP\"\n    description                = \"Allow HTTP\"\n    priority                   = 110\n    direction                  = \"Inbound\"\n    access                     = \"Allow\"\n    protocol                   = \"Tcp\"\n    source_port_range          = \"*\"\n    destination_port_range     = \"80\"\n    source_address_prefix      = \"Internet\"\n    destination_address_prefix = \"*\"\n  }\n}\n"}}}}], "suppressions": [{"kind": "inSource", "justification": " ADD REASON"}]}, {"ruleId": "CKV_AZURE_10", "ruleIndex": 10, "level": "error", "attachments": [], "message": {"text": "Azure Network Security Group allows all traffic on SSH (port 22)"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "vm.tf"}, "region": {"startLine": 35, "endLine": 65, "snippet": {"text": "resource \"azurerm_network_security_group\" \"nginx-vm-nsg\" {\n  depends_on          = [azurerm_resource_group.rg]\n  name                = \"nginx-nsg\"\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  security_rule {\n    name                       = \"Allow-SSH\"\n    description                = \"Allow SSH\"\n    priority                   = 100\n    direction                  = \"Inbound\"\n    access                     = \"Allow\"\n    protocol                   = \"Tcp\"\n    source_port_range          = \"*\"\n    destination_port_range     = \"22\"\n    source_address_prefix      = \"Internet\"\n    destination_address_prefix = \"*\"\n  }\n\n  security_rule {\n    name                       = \"Allow-HTTP\"\n    description                = \"Allow HTTP\"\n    priority                   = 110\n    direction                  = \"Inbound\"\n    access                     = \"Allow\"\n    protocol                   = \"Tcp\"\n    source_port_range          = \"*\"\n    destination_port_range     = \"80\"\n    source_address_prefix      = \"Internet\"\n    destination_address_prefix = \"*\"\n  }\n}\n"}}}}], "suppressions": [{"kind": "inSource", "justification": " ADD REASON"}]}, {"ruleId": "CKV_AZURE_1", "ruleIndex": 11, "level": "error", "attachments": [], "message": {"text": "Azure instance does not authenticate using SSH keys"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "vm.tf"}, "region": {"startLine": 95, "endLine": 119, "snippet": {"text": "resource \"azurerm_linux_virtual_machine\" \"nginx-vm\" {\n  depends_on            = [azurerm_network_interface.nginx-nic]\n  name                  = \"nginx-vm\"\n  location              = azurerm_resource_group.rg.location\n  resource_group_name   = azurerm_resource_group.rg.name\n  network_interface_ids = [azurerm_network_interface.nginx-nic.id]\n  size                  = var.nginx_vm_size\n  source_image_reference {\n    publisher = var.publisher\n    offer     = var.offer\n    sku       = var.sku\n    version   = \"latest\"\n  }\n  os_disk {\n    name                 = \"nginx-osdisk\"\n    caching              = \"ReadWrite\"\n    storage_account_type = \"Standard_LRS\"\n  }\n\n  computer_name                   = \"nginx-vm\"\n  admin_username                  = var.nginx_admin_username\n  admin_password                  = random_password.nginx-vm-password.result\n  disable_password_authentication = false\n  custom_data                     = base64encode(data.template_file.nginx-vm-cloud-init.rendered)\n}\n"}}}}], "suppressions": [{"kind": "inSource", "justification": " ADD REASON"}]}, {"ruleId": "CKV_AZURE_50", "ruleIndex": 12, "level": "warning", "attachments": [], "message": {"text": "Virtual Machine extensions are installed"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "vm.tf"}, "region": {"startLine": 95, "endLine": 119, "snippet": {"text": "resource \"azurerm_linux_virtual_machine\" \"nginx-vm\" {\n  depends_on            = [azurerm_network_interface.nginx-nic]\n  name                  = \"nginx-vm\"\n  location              = azurerm_resource_group.rg.location\n  resource_group_name   = azurerm_resource_group.rg.name\n  network_interface_ids = [azurerm_network_interface.nginx-nic.id]\n  size                  = var.nginx_vm_size\n  source_image_reference {\n    publisher = var.publisher\n    offer     = var.offer\n    sku       = var.sku\n    version   = \"latest\"\n  }\n  os_disk {\n    name                 = \"nginx-osdisk\"\n    caching              = \"ReadWrite\"\n    storage_account_type = \"Standard_LRS\"\n  }\n\n  computer_name                   = \"nginx-vm\"\n  admin_username                  = var.nginx_admin_username\n  admin_password                  = random_password.nginx-vm-password.result\n  disable_password_authentication = false\n  custom_data                     = base64encode(data.template_file.nginx-vm-cloud-init.rendered)\n}\n"}}}}], "suppressions": [{"kind": "inSource", "justification": " ADD REASON"}]}, {"ruleId": "CKV_AZURE_149", "ruleIndex": 13, "level": "note", "attachments": [], "message": {"text": "Azure Virtual machine enables password authentication"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "vm.tf"}, "region": {"startLine": 95, "endLine": 119, "snippet": {"text": "resource \"azurerm_linux_virtual_machine\" \"nginx-vm\" {\n  depends_on            = [azurerm_network_interface.nginx-nic]\n  name                  = \"nginx-vm\"\n  location              = azurerm_resource_group.rg.location\n  resource_group_name   = azurerm_resource_group.rg.name\n  network_interface_ids = [azurerm_network_interface.nginx-nic.id]\n  size                  = var.nginx_vm_size\n  source_image_reference {\n    publisher = var.publisher\n    offer     = var.offer\n    sku       = var.sku\n    version   = \"latest\"\n  }\n  os_disk {\n    name                 = \"nginx-osdisk\"\n    caching              = \"ReadWrite\"\n    storage_account_type = \"Standard_LRS\"\n  }\n\n  computer_name                   = \"nginx-vm\"\n  admin_username                  = var.nginx_admin_username\n  admin_password                  = random_password.nginx-vm-password.result\n  disable_password_authentication = false\n  custom_data                     = base64encode(data.template_file.nginx-vm-cloud-init.rendered)\n}\n"}}}}], "suppressions": [{"kind": "inSource", "justification": " ADD REASON"}]}, {"ruleId": "CKV_AZURE_119", "ruleIndex": 14, "level": "note", "attachments": [], "message": {"text": "Network interfaces use public IPs"}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": "vm.tf"}, "region": {"startLine": 81, "endLine": 93, "snippet": {"text": "resource \"azurerm_network_interface\" \"nginx-nic\" {\n  depends_on          = [azurerm_resource_group.rg]\n  name                = \"nginx-nic\"\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n\n  ip_configuration {\n    name                          = \"internal\"\n    subnet_id                     = azurerm_subnet.subnets[1].id\n    private_ip_address_allocation = \"Dynamic\"\n    public_ip_address_id          = azurerm_public_ip.nginx-vm-ip.id\n  }\n}\n"}}}}], "suppressions": [{"kind": "inSource", "justification": " ADD REASON"}]}]}]}
+{
+    "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Checkov",
+                    "version": "2.3.205",
+                    "informationUri": "https://checkov.io",
+                    "rules": [
+                        {
+                            "id": "CKV_AZURE_7",
+                            "name": "Azure AKS cluster network policies are not enforced",
+                            "shortDescription": {
+                                "text": "Azure AKS cluster network policies are not enforced"
+                            },
+                            "fullDescription": {
+                                "text": "Azure AKS cluster network policies are not enforced"
+                            },
+                            "help": {
+                                "text": "Azure AKS cluster network policies are not enforced\nResource: azurerm_kubernetes_cluster.aks"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "properties": {
+                                "problem.severity": "error",
+                                "security-severity": "9.8"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_kubernetes_4"
+                        },
+                        {
+                            "id": "CKV_AZURE_117",
+                            "name": "AKS does not use disk encryption set",
+                            "shortDescription": {
+                                "text": "AKS does not use disk encryption set"
+                            },
+                            "fullDescription": {
+                                "text": "AKS does not use disk encryption set"
+                            },
+                            "help": {
+                                "text": "AKS does not use disk encryption set\nResource: azurerm_kubernetes_cluster.aks"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-aks-uses-disk-encryption-set"
+                        },
+                        {
+                            "id": "CKV_AZURE_115",
+                            "name": "AKS is not enabled for private clusters",
+                            "shortDescription": {
+                                "text": "AKS is not enabled for private clusters"
+                            },
+                            "fullDescription": {
+                                "text": "AKS is not enabled for private clusters"
+                            },
+                            "help": {
+                                "text": "AKS is not enabled for private clusters\nResource: azurerm_kubernetes_cluster.aks"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-aks-enables-private-clusters"
+                        },
+                        {
+                            "id": "CKV_AZURE_141",
+                            "name": "Azure Kubernetes Service (AKS) local admin account is enabled",
+                            "shortDescription": {
+                                "text": "Azure Kubernetes Service (AKS) local admin account is enabled"
+                            },
+                            "fullDescription": {
+                                "text": "Azure Kubernetes Service (AKS) local admin account is enabled"
+                            },
+                            "help": {
+                                "text": "Azure Kubernetes Service (AKS) local admin account is enabled\nResource: azurerm_kubernetes_cluster.aks"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/ensure-azure-kubernetes-service-aks-local-admin-account-is-disabled"
+                        },
+                        {
+                            "id": "CKV_AZURE_116",
+                            "name": "AKS does not use Azure policies add-on",
+                            "shortDescription": {
+                                "text": "AKS does not use Azure policies add-on"
+                            },
+                            "fullDescription": {
+                                "text": "AKS does not use Azure policies add-on"
+                            },
+                            "help": {
+                                "text": "AKS does not use Azure policies add-on\nResource: azurerm_kubernetes_cluster.aks"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-aks-uses-azure-policies-add-on"
+                        },
+                        {
+                            "id": "CKV_AZURE_6",
+                            "name": "AKS API server does not define authorized IP ranges",
+                            "shortDescription": {
+                                "text": "AKS API server does not define authorized IP ranges"
+                            },
+                            "fullDescription": {
+                                "text": "AKS API server does not define authorized IP ranges"
+                            },
+                            "help": {
+                                "text": "AKS API server does not define authorized IP ranges\nResource: azurerm_kubernetes_cluster.aks"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_kubernetes_3"
+                        },
+                        {
+                            "id": "807098694255043584_Azure_1647420897055",
+                            "name": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]",
+                            "shortDescription": {
+                                "text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]"
+                            },
+                            "fullDescription": {
+                                "text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]"
+                            },
+                            "help": {
+                                "text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]\nResource: azurerm_kubernetes_cluster.aks"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            }
+                        },
+                        {
+                            "id": "807098694255043584_AZR_1671092284450",
+                            "name": "Azure Container registries Public access to All networks is enabled",
+                            "shortDescription": {
+                                "text": "Azure Container registries Public access to All networks is enabled"
+                            },
+                            "fullDescription": {
+                                "text": "Azure Container registries Public access to All networks is enabled"
+                            },
+                            "help": {
+                                "text": "Azure Container registries Public access to All networks is enabled\nResource: azurerm_container_registry.acr"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            }
+                        },
+                        {
+                            "id": "807098694255043584_AZR_1681255127049",
+                            "name": "Azure AKS cluster monitoring not enabled",
+                            "shortDescription": {
+                                "text": "Azure AKS cluster monitoring not enabled"
+                            },
+                            "fullDescription": {
+                                "text": "Azure AKS cluster monitoring not enabled"
+                            },
+                            "help": {
+                                "text": "Azure AKS cluster monitoring not enabled\nResource: azurerm_kubernetes_cluster.aks"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            }
+                        },
+                        {
+                            "id": "CKV_AZURE_160",
+                            "name": "Azure HTTP (port 80) access from the internet is not restricted",
+                            "shortDescription": {
+                                "text": "Azure HTTP (port 80) access from the internet is not restricted"
+                            },
+                            "fullDescription": {
+                                "text": "Azure HTTP (port 80) access from the internet is not restricted"
+                            },
+                            "help": {
+                                "text": "Azure HTTP (port 80) access from the internet is not restricted\nResource: azurerm_network_security_group.nginx-vm-nsg"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/ensure-azure-http-port-80-access-from-the-internet-is-restricted"
+                        },
+                        {
+                            "id": "CKV_AZURE_10",
+                            "name": "Azure Network Security Group allows all traffic on SSH (port 22)",
+                            "shortDescription": {
+                                "text": "Azure Network Security Group allows all traffic on SSH (port 22)"
+                            },
+                            "fullDescription": {
+                                "text": "Azure Network Security Group allows all traffic on SSH (port 22)"
+                            },
+                            "help": {
+                                "text": "Azure Network Security Group allows all traffic on SSH (port 22)\nResource: azurerm_network_security_group.nginx-vm-nsg"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_networking_3"
+                        },
+                        {
+                            "id": "CKV_AZURE_1",
+                            "name": "Azure instance does not authenticate using SSH keys",
+                            "shortDescription": {
+                                "text": "Azure instance does not authenticate using SSH keys"
+                            },
+                            "fullDescription": {
+                                "text": "Azure instance does not authenticate using SSH keys"
+                            },
+                            "help": {
+                                "text": "Azure instance does not authenticate using SSH keys\nResource: azurerm_linux_virtual_machine.nginx-vm"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_networking_1"
+                        },
+                        {
+                            "id": "CKV_AZURE_50",
+                            "name": "Virtual Machine extensions are installed",
+                            "shortDescription": {
+                                "text": "Virtual Machine extensions are installed"
+                            },
+                            "fullDescription": {
+                                "text": "Virtual Machine extensions are installed"
+                            },
+                            "help": {
+                                "text": "Virtual Machine extensions are installed\nResource: azurerm_linux_virtual_machine.nginx-vm"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_general_14"
+                        },
+                        {
+                            "id": "CKV_AZURE_149",
+                            "name": "Azure Virtual machine enables password authentication",
+                            "shortDescription": {
+                                "text": "Azure Virtual machine enables password authentication"
+                            },
+                            "fullDescription": {
+                                "text": "Azure Virtual machine enables password authentication"
+                            },
+                            "help": {
+                                "text": "Azure Virtual machine enables password authentication\nResource: azurerm_linux_virtual_machine.nginx-vm"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/ensure-azure-virtual-machine-does-not-enable-password-authentication"
+                        },
+                        {
+                            "id": "CKV_AZURE_119",
+                            "name": "Network interfaces use public IPs",
+                            "shortDescription": {
+                                "text": "Network interfaces use public IPs"
+                            },
+                            "fullDescription": {
+                                "text": "Network interfaces use public IPs"
+                            },
+                            "help": {
+                                "text": "Network interfaces use public IPs\nResource: azurerm_network_interface.nginx-nic"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-network-interfaces-dont-use-public-ips"
+                        }
+                    ],
+                    "organization": "bridgecrew"
+                }
+            },
+            "results": [
+                {
+                    "ruleId": "CKV_AZURE_7",
+                    "ruleIndex": 0,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure AKS cluster network policies are not enforced"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_117",
+                    "ruleIndex": 1,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "AKS does not use disk encryption set"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_115",
+                    "ruleIndex": 2,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "AKS is not enabled for private clusters"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_141",
+                    "ruleIndex": 3,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure Kubernetes Service (AKS) local admin account is enabled"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_116",
+                    "ruleIndex": 4,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "AKS does not use Azure policies add-on"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_6",
+                    "ruleIndex": 5,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "AKS API server does not define authorized IP ranges"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "807098694255043584_Azure_1647420897055",
+                    "ruleIndex": 6,
+                    "level": "error",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "807098694255043584_Azure_1647420897055",
+                    "ruleIndex": 6,
+                    "level": "error",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure  Resource Groups Require CostCenter Tag [Kubernetes Community Days Amsterdam 2023 Rule!]"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "base.tf"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_resource_group\" \"rg\" {\n  name     = var.rg_name\n  location = var.location\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "807098694255043584_AZR_1671092284450",
+                    "ruleIndex": 7,
+                    "level": "warning",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure Container registries Public access to All networks is enabled"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "endLine": 7,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_container_registry\" \"acr\" {\n  name                = var.acr_name\n  resource_group_name = azurerm_resource_group.rg.name\n  location            = azurerm_resource_group.rg.location\n  sku                 = \"Premium\"\n  admin_enabled       = false\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "807098694255043584_AZR_1681255127049",
+                    "ruleIndex": 8,
+                    "level": "none",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure AKS cluster monitoring not enabled"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "aks.tf"
+                                },
+                                "region": {
+                                    "startLine": 9,
+                                    "endLine": 29,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_kubernetes_cluster\" \"aks\" {\n  name                = var.aks_cluster_name\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  dns_prefix          = \"belfiusaks\"\n\n  default_node_pool {\n    name           = \"default\"\n    node_count     = var.aks_cluster_count\n    vm_size        = var.aks_cluster_size\n    vnet_subnet_id = azurerm_subnet.subnets[0].id\n  }\n\n  identity {\n    type = \"SystemAssigned\"\n  }\n\n  tags = {\n    Environment = \"Sandbox\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_160",
+                    "ruleIndex": 9,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure HTTP (port 80) access from the internet is not restricted"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "vm.tf"
+                                },
+                                "region": {
+                                    "startLine": 35,
+                                    "endLine": 65,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_network_security_group\" \"nginx-vm-nsg\" {\n  depends_on          = [azurerm_resource_group.rg]\n  name                = \"nginx-nsg\"\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  security_rule {\n    name                       = \"Allow-SSH\"\n    description                = \"Allow SSH\"\n    priority                   = 100\n    direction                  = \"Inbound\"\n    access                     = \"Allow\"\n    protocol                   = \"Tcp\"\n    source_port_range          = \"*\"\n    destination_port_range     = \"22\"\n    source_address_prefix      = \"Internet\"\n    destination_address_prefix = \"*\"\n  }\n\n  security_rule {\n    name                       = \"Allow-HTTP\"\n    description                = \"Allow HTTP\"\n    priority                   = 110\n    direction                  = \"Inbound\"\n    access                     = \"Allow\"\n    protocol                   = \"Tcp\"\n    source_port_range          = \"*\"\n    destination_port_range     = \"80\"\n    source_address_prefix      = \"Internet\"\n    destination_address_prefix = \"*\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "suppressions": [
+                        {
+                            "kind": "inSource",
+                            "justification": " ADD REASON"
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_10",
+                    "ruleIndex": 10,
+                    "level": "error",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure Network Security Group allows all traffic on SSH (port 22)"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "vm.tf"
+                                },
+                                "region": {
+                                    "startLine": 35,
+                                    "endLine": 65,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_network_security_group\" \"nginx-vm-nsg\" {\n  depends_on          = [azurerm_resource_group.rg]\n  name                = \"nginx-nsg\"\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  security_rule {\n    name                       = \"Allow-SSH\"\n    description                = \"Allow SSH\"\n    priority                   = 100\n    direction                  = \"Inbound\"\n    access                     = \"Allow\"\n    protocol                   = \"Tcp\"\n    source_port_range          = \"*\"\n    destination_port_range     = \"22\"\n    source_address_prefix      = \"Internet\"\n    destination_address_prefix = \"*\"\n  }\n\n  security_rule {\n    name                       = \"Allow-HTTP\"\n    description                = \"Allow HTTP\"\n    priority                   = 110\n    direction                  = \"Inbound\"\n    access                     = \"Allow\"\n    protocol                   = \"Tcp\"\n    source_port_range          = \"*\"\n    destination_port_range     = \"80\"\n    source_address_prefix      = \"Internet\"\n    destination_address_prefix = \"*\"\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "suppressions": [
+                        {
+                            "kind": "inSource",
+                            "justification": " ADD REASON"
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_1",
+                    "ruleIndex": 11,
+                    "level": "error",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure instance does not authenticate using SSH keys"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "vm.tf"
+                                },
+                                "region": {
+                                    "startLine": 95,
+                                    "endLine": 119,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_linux_virtual_machine\" \"nginx-vm\" {\n  depends_on            = [azurerm_network_interface.nginx-nic]\n  name                  = \"nginx-vm\"\n  location              = azurerm_resource_group.rg.location\n  resource_group_name   = azurerm_resource_group.rg.name\n  network_interface_ids = [azurerm_network_interface.nginx-nic.id]\n  size                  = var.nginx_vm_size\n  source_image_reference {\n    publisher = var.publisher\n    offer     = var.offer\n    sku       = var.sku\n    version   = \"latest\"\n  }\n  os_disk {\n    name                 = \"nginx-osdisk\"\n    caching              = \"ReadWrite\"\n    storage_account_type = \"Standard_LRS\"\n  }\n\n  computer_name                   = \"nginx-vm\"\n  admin_username                  = var.nginx_admin_username\n  admin_password                  = random_password.nginx-vm-password.result\n  disable_password_authentication = false\n  custom_data                     = base64encode(data.template_file.nginx-vm-cloud-init.rendered)\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "suppressions": [
+                        {
+                            "kind": "inSource",
+                            "justification": " ADD REASON"
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_50",
+                    "ruleIndex": 12,
+                    "level": "warning",
+                    "attachments": [],
+                    "message": {
+                        "text": "Virtual Machine extensions are installed"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "vm.tf"
+                                },
+                                "region": {
+                                    "startLine": 95,
+                                    "endLine": 119,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_linux_virtual_machine\" \"nginx-vm\" {\n  depends_on            = [azurerm_network_interface.nginx-nic]\n  name                  = \"nginx-vm\"\n  location              = azurerm_resource_group.rg.location\n  resource_group_name   = azurerm_resource_group.rg.name\n  network_interface_ids = [azurerm_network_interface.nginx-nic.id]\n  size                  = var.nginx_vm_size\n  source_image_reference {\n    publisher = var.publisher\n    offer     = var.offer\n    sku       = var.sku\n    version   = \"latest\"\n  }\n  os_disk {\n    name                 = \"nginx-osdisk\"\n    caching              = \"ReadWrite\"\n    storage_account_type = \"Standard_LRS\"\n  }\n\n  computer_name                   = \"nginx-vm\"\n  admin_username                  = var.nginx_admin_username\n  admin_password                  = random_password.nginx-vm-password.result\n  disable_password_authentication = false\n  custom_data                     = base64encode(data.template_file.nginx-vm-cloud-init.rendered)\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "suppressions": [
+                        {
+                            "kind": "inSource",
+                            "justification": " ADD REASON"
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_149",
+                    "ruleIndex": 13,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "Azure Virtual machine enables password authentication"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "vm.tf"
+                                },
+                                "region": {
+                                    "startLine": 95,
+                                    "endLine": 119,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_linux_virtual_machine\" \"nginx-vm\" {\n  depends_on            = [azurerm_network_interface.nginx-nic]\n  name                  = \"nginx-vm\"\n  location              = azurerm_resource_group.rg.location\n  resource_group_name   = azurerm_resource_group.rg.name\n  network_interface_ids = [azurerm_network_interface.nginx-nic.id]\n  size                  = var.nginx_vm_size\n  source_image_reference {\n    publisher = var.publisher\n    offer     = var.offer\n    sku       = var.sku\n    version   = \"latest\"\n  }\n  os_disk {\n    name                 = \"nginx-osdisk\"\n    caching              = \"ReadWrite\"\n    storage_account_type = \"Standard_LRS\"\n  }\n\n  computer_name                   = \"nginx-vm\"\n  admin_username                  = var.nginx_admin_username\n  admin_password                  = random_password.nginx-vm-password.result\n  disable_password_authentication = false\n  custom_data                     = base64encode(data.template_file.nginx-vm-cloud-init.rendered)\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "suppressions": [
+                        {
+                            "kind": "inSource",
+                            "justification": " ADD REASON"
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CKV_AZURE_119",
+                    "ruleIndex": 14,
+                    "level": "note",
+                    "attachments": [],
+                    "message": {
+                        "text": "Network interfaces use public IPs"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "vm.tf"
+                                },
+                                "region": {
+                                    "startLine": 81,
+                                    "endLine": 93,
+                                    "snippet": {
+                                        "text": "resource \"azurerm_network_interface\" \"nginx-nic\" {\n  depends_on          = [azurerm_resource_group.rg]\n  name                = \"nginx-nic\"\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n\n  ip_configuration {\n    name                          = \"internal\"\n    subnet_id                     = azurerm_subnet.subnets[1].id\n    private_ip_address_allocation = \"Dynamic\"\n    public_ip_address_id          = azurerm_public_ip.nginx-vm-ip.id\n  }\n}\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "suppressions": [
+                        {
+                            "kind": "inSource",
+                            "justification": " ADD REASON"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
