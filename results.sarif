@@ -25,7 +25,6 @@
                                 "level": "error"
                             },
                             "properties": {
-                                "problem.severity": "error",
                                 "security-severity": "9.8"
                             },
                             "helpUri": "https://docs.bridgecrew.io/docs/bc_azr_kubernetes_4"
@@ -45,6 +44,9 @@
                             "defaultConfiguration": {
                                 "level": "error"
                             },
+                            "properties": {
+                                "security-severity": "7.8"
+                            },
                             "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-aks-uses-disk-encryption-set"
                         },
                         {
@@ -61,6 +63,9 @@
                             },
                             "defaultConfiguration": {
                                 "level": "error"
+                            },
+                            "properties": {
+                                "security-severity": "4.8"
                             },
                             "helpUri": "https://docs.bridgecrew.io/docs/ensure-that-aks-enables-private-clusters"
                         },
