@@ -1,0 +1,27 @@
+name: upload sarif to test
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  prisma_cloud_iac_scan:
+    runs-on: ubuntu-latest
+    permissions:
+      # required for all workflows
+      security-events: write
+    name: Run Prisma Cloud IaC Scan to check 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Prisma - Inspect action SARIF report
+        run: jq '.' results.sarif
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
