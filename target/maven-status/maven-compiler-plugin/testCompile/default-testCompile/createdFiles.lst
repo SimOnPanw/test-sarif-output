@@ -1,0 +1,4 @@
+io/github/anantharajuc/sbmwa/repository/PersonRepositoryTest.class
+io/github/anantharajuc/sbmwa/SpringBootMinimalWebAppApplicationTests.class
+io/github/anantharajuc/sbmwa/service/impl/PersonServiceImplTest.class
+io/github/anantharajuc/sbmwa/api/controller/person/PersonQueryControllerTest.class

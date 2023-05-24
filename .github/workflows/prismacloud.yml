@@ -7,6 +7,12 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+env:
+  PRISMA_CLOUD_CONSOLE: https://console.myprismacloud.com
+  REPO_ID: JavaSpringWebApp/Main/github
+  BUILD_IMAGE: "simonpanw/javaspringwebapp-test"
+  REMOTE_REGISTRY: "registry.myprismacloud.com"
+
 jobs:
   prisma_cloud_iac_scan:
     runs-on: ubuntu-latest
@@ -17,9 +23,37 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      #Set up JDK 11
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+
+      #Set up Maven cache
+      - name: Cache Maven packages
+        #This action allows caching dependencies and build outputs to improve workflow execution time.
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+          
+      - name: Prisma Cloud image scan
+        id: scan
+        uses: PaloAltoNetworks/prisma-cloud-scan@v1
+        with:
+          pcc_console_url: ${{ env.PRISMA_CLOUD_CONSOLE }}
+          pcc_user: ${{ secrets.PCC_USER }}
+          pcc_pass: ${{ secrets.PCC_PASS }}
+          image_name: ${{ env.BUILD_IMAGE }}
         
       - name: Prisma - Inspect action SARIF report
-        run: jq '.' results.sarif
+        run: jq '.' ${{ steps.scan.outputs.sarif_file }}
+        
+      - name: Prisma - Inspect action JSON report
+        run: jq '.' ${{ steps.scan.outputs.results_file }}
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2

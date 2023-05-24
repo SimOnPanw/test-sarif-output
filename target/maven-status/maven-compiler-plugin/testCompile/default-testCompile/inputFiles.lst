@@ -1,0 +1,4 @@
+/home/simon/development/java-spring-boot-web-app/src/test/java/io/github/anantharajuc/sbmwa/repository/PersonRepositoryTest.java
+/home/simon/development/java-spring-boot-web-app/src/test/java/io/github/anantharajuc/sbmwa/service/impl/PersonServiceImplTest.java
+/home/simon/development/java-spring-boot-web-app/src/test/java/io/github/anantharajuc/sbmwa/SpringBootMinimalWebAppApplicationTests.java
+/home/simon/development/java-spring-boot-web-app/src/test/java/io/github/anantharajuc/sbmwa/api/controller/person/PersonQueryControllerTest.java
