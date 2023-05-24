@@ -61,6 +61,22 @@ jobs:
         
       - name: Prisma - Inspect action JSON report
         run: jq '.' ${{ steps.scan.outputs.results_file }}
+        
+      - name: Prisma - Inspect action JSON report
+        run: jq '.' ${{ steps.scan.outputs.results_file }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies and run scripts
+        run: |
+          sudo apt-get install -y python3
+          wget -O converter.py https://raw.githubusercontent.com/SimOnPanw/twistcli-sarif/main/main.py
+          chmod +x twistcli
+          export TL_VERSION=$(./twistcli --version)
+          python3 converter.py --twistcli "$TL_VERSION" --results ${{ steps.scan.outputs.results_file }} --output "results.sarif"
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
