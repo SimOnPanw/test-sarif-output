@@ -24,6 +24,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+        
+      - name: Install dependencies and run scripts
+        run: |
+          curl -s -k -u ${{ secrets.PCUSER }}:${{ secrets.PCPASS }} ${{ env.PRISMA_CLOUD_CONSOLE }}/api/v1/version 
+
       #Set up JDK 11
       - name: Set up JDK
         uses: actions/setup-java@v1
@@ -74,8 +79,9 @@ jobs:
         run: |
           sudo apt-get install -y python3
           wget -O converter.py https://raw.githubusercontent.com/SimOnPanw/twistcli-sarif/main/main.py
-          chmod +x twistcli
-          export TL_VERSION=$(./twistcli --version)
+          curl -s -k -u ${{ secrets.PCUSER }}:${{ secrets.PCPASS }} ${{ env.PRISMA_CLOUD_CONSOLE }}/api/v1/version 
+          
+          export TL_VERSION=$(curl -s -k -u ${{ secrets.PCUSER }}:${{ secrets.PCPASS }} ${{ env.PRISMA_CLOUD_CONSOLE }}/api/v1/version)
           python3 converter.py --twistcli "$TL_VERSION" --results ${{ steps.scan.outputs.results_file }} --output "results.sarif"
 
       - name: Upload SARIF file
