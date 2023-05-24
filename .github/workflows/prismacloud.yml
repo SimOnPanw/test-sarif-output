@@ -23,11 +23,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
         
       - name: Install dependencies and run scripts
         run: |
-          curl -s -k -u ${{ secrets.PCUSER }}:${{ secrets.PCPASS }} ${{ env.PRISMA_CLOUD_CONSOLE }}/api/v1/version 
+          curl -s -k -u ${{ secrets.PCC_USER }}:${{ secrets.PCC_PASS }} ${{ env.PRISMA_CLOUD_CONSOLE }}/api/v1/version 
 
       #Set up JDK 11
       - name: Set up JDK
